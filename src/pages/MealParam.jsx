@@ -1,12 +1,13 @@
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 function MealParam() {
 
-    const value = useParams();
-
-    console.log(value);
+    const {title} = useParams();
+    const navigate = useNavigate();
+    
+    
   return (
-    <div>MealParam</div>
+    <div onClick={() => navigate('/about')}>{title} meal</div>
   )
 }
 
